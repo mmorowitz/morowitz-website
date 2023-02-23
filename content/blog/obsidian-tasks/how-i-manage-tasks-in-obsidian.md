@@ -188,5 +188,8 @@ Project notes have the following uses:
 
 There are definitely efficiencies that can be found with more advance uses of plugins, Templater, and other tips and tricks. The possibilities are pretty vast. If you have some suggestions, ideas, questions, or just want to say 'hi' or thanks, you can reach me at hello at morowitz.com.
 
+## References (and other reading)
+- [Sample Obsidian Vault](https://github.com/mmorowitz/sample-obsidian-tasks-vault)
+
 ## Changelog
 2023.01.28- Initial Version
