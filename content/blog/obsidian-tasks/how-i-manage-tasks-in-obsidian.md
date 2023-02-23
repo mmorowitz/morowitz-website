@@ -105,9 +105,9 @@ Templates are the heart of the system. They set up the Daily Note, Person Notes,
 #### The Daily Note Template
 Each day I generate a daily note. Here's a sample of a rendered daily note:
 
-Image of a daily note goes here
+{% image "./dailynote.png", "A screencapture of a sample daily note from the sample vault" %}
 
-It is based on my Daily Note template (full source) which has three important task queries:
+It is based on my Daily Note template ([source](https://github.com/mmorowitz/sample-obsidian-tasks-vault/blob/main/Templates/Daily%20Note%20Template.md)) which has three important task queries:
 
 1. **Tasks Planned Today**
 This lists out any uncompleted tasks that have been either set to be DUE today (or earlier) or SCHEDULED today (or earlier). I do not personally use deadline, I simply review daily and schedule tasks.
@@ -161,7 +161,7 @@ Person notes are prefixed with a `@` to make it easy to filter when inserting a 
 
 The Person note has two main uses:
 1. Houses the query that shows all tasks where this person is tagged. So, when I'm talking to them, I can pull up a list of everything I want to discuss, review, or delegate to them.
-2. Backlinks to this file serve as a record of when I met with an individual. I simply link to them in my Daily Note journal (see sample vault).
+2. Backlinks to this file serve as a record of when I met with an individual. I simply link to them in my Daily Note journal (see [sample vault](https://github.com/mmorowitz/sample-obsidian-tasks-vault)).
 
 #### The Project Template
 I keep a note associated with any project I'm working on. I use the [GTD definition of a project](https://gettingthingsdone.com/2017/05/managing-projects-with-gtd/): Anything that has multiple steps and a defined outcome.
