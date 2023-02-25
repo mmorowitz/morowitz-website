@@ -18,60 +18,60 @@ Index:
 5. [Changelog](#changelog)
 
 ## Introduction
-I use Obsidian and a collection of plugins for a custom system that combines task management with daily journaling and free-form note-taking. My goal was a balance between simplicity, flexibility, and portability. While this does utilize Obsidian-specific plugins, it doesn't *rely* on them to keep the information. Everything is still plain text in markdown. Any plugin is essentially a shortcut/workflow enabler.
+I use Obsidian for a custom system that combines task management with daily journaling and free-form note taking. My goal was a balance between simplicity, flexibility, and portability. While this does utilize Obsidian-specific plugins, it doesn't *rely* on them to keep the information. Everything is still  markdown. Any plugin is essentially a shortcut/workflow enabler.
 
-> **Note**: This guide covers tempaltes and a workflow and assumes you know the basics of using Obsidian and plugins. I'm sure there are a thousand ways to improve this. If you have any questions, ideas, suggestions, or just want to say 'hi', I'm at hello at morowitz.com.
+> **Note**: This guide covers templates and a workflow and assumes you know the basics of using Obsidian and plugins. I'm sure there are a thousand ways to improve this. If you have any questions, ideas, suggestions, or just want to say 'hi', I'm at hello at morowitz.com.
 
-My task management technique is loosely inspired by [David Allen's "Getting Things Done"](https://gettingthingsdone.com/), particularly with concepts like *Next Action*, *Wating For*, periodic reviews, reminders (ticklers), and contexts.
+My task management workflow is loosely inspired by [David Allen's "Getting Things Done"](https://gettingthingsdone.com/), using concepts like *Next Action*, *Wating For*, periodic reviews, reminders (ticklers), and contexts.
 
-This system is driven by a few key components:
-1. Daily notes: Each day has a note which is used for free-form journaling, task lists for today's relevant notes, and any other relavant daily information such as repeatable habits or checklists.
+The Obsidian system is driven by a few key components:
+1. **Daily notes**: Each day has a note which is used for free-form journaling, task lists for today's relevant notes, and any other relevant daily information such as repeatable habits or checklists.
 
-2. Person notes: Each person I interact with (primarily professionally) has a note (prefixed with `@`). On this page I can display a list of tasks where they are mentioned and any other important information I need to remember about them.
+2. **Person notes**: Each person I interact with (primarily professionally) has a note (title prefixed with `@`). In this note I can display a list of tasks where they are mentioned and any other important information I need to remember about the person.
 
-3. Project notes: Each project I'm working on has an index page which will house a list of tasks as well as any other project information (links to other notes, etc.)
+3. **Project notes**: Each project I'm working on has an index page which will house a list of tasks as well as any other project information (links to other notes, etc.)
 
-4. Tags and context lists: Tasks are categorized by tags and viewable in lists based on context.
+4. **Tags and context lists**: Tasks are categorized by tags and viewable in lists based on context.
 
 ### System Overview
-The system is mainly driven by a Daily Note and its connections to People Notes and Project Notes.
+The system is driven by a Daily Note and its connections to People Notes and Project Notes.
 
-Tasks can be added anywhere, but they are primarily added to Daily Notes and Project Notes.
+- Tasks can be added anywhere, in any note, but they are primarily added to Daily Notes and Project Notes.
 - A task gets added to a Daily Note in the context of taking notes during the day. If I think of something I need to remember tomorrow, I'll simply add the task in-line in the Daily Note and set the scheduled date for tomorrow.
 - Tasks get added to project notes while project planning, during review cycles, or during other meetings, discussions related to the project.
 - Daily Notes and Person Notes have queries which display lists of tasks associated with them.
     - In the case of Daily Notes, tasks are displayed which are scheduled for that day or earlier.
     - In the case of Person Notes, tasks are displayed which have a link to that note.
-- There is a small risk of a task becoming an "orphan", an untracked task with no date or tag. In general, a task should:
-    - Exist on a Project's main note so that it gets regularly reviewed
-    - Have an assigned date which will ensure it shows up on the appropriate Daily Note
-    - Have assigned tag, such as `#NextAction` or `#Context/Errand`
-    - Have a link to a Person Note
-- Tasks can get also added to ad-hoc notes like meeting notes or other ephemeral documents. These notes get put, by default, in the Inbox folder to ensure they get reviewed before filing. This ensures that any tasks in those documents don't wind up as orphans in the system.
+- There is a small risk of a task becoming an "orphan" (an untracked task with no date or tag). In general, a task should:
+    1. Exist on a Project's main note so that it gets regularly reviewed
+    2. Have an assigned date which will ensure it shows up on the appropriate Daily Note
+    3. Have assigned tag, such as `#NextAction` or `#Context/Errand`
+    4. Have a link to a Person Note
+- Tasks can get also added to ad-hoc notes (e.g. meeting notes or other ephemeral documents). These notes get put, by default, in the Inbox folder to ensure they get reviewed before filing. This ensures that any tasks in those documents don't wind up as orphans in the system.
 - Finally, there are root-level files that maintain broad queries of tasks which enable a larger review of the system or quick access to views across projects or people. These are:
-    - All tasks. Self-explanatory.
-    - Next Actions: All tasks tagged `#NextAction`. These are actionable tasks from projects.
-    - Waiting For: All tasks tagged `#WaitingFor`. These are delegated tasks or tasks I'm waiting for someone else to complete.
-    - Specific context lists such as Errands: A list of all tasks tagged with whatever context. Since I work from home, I am not heavily context-driven. My most common context is `#Context/Errand`.
-    - Orphans: This file should be empty at all times. It queries for tasks that are not in a Project or Person note, have no date, and have no tag. I check it regularly to make sure there aren't any tasks hiding in the system that I'm not aware of.
+    - **All tasks**: Self-explanatory.
+    - **Next Actions**: All tasks tagged `#NextAction`. These are actionable tasks from projects. I review this daily.
+    - **Waiting For**: All tasks tagged `#WaitingFor`. These are delegated tasks or tasks I'm waiting for someone else to complete. I review this daily.
+    - **Context lists**: A list of all tasks tagged with whatever contexts I have. Since I work from home, I am not heavily context-driven. My most common context is `#Context/Errand`.
+    - **Orphans**: This file should be empty at all times. It queries for tasks that are not in a Project or Person note, have no date, and have no tag. I check it regularly to make sure there aren't any tasks hiding in the system that I'm not aware of.
 
 ### Benefits of this system
-- Integrated: The best part about this system for my use is that tasks live side-by-side with the information that they're related to. Other dedicated task managers are great at organizing complex lists of tasks but require management unto themselves, separate from the place where you take notes related to the actual work. This system allows both project note-taking, idea management, reminders, and tasks to be commingled.
-- Flexibility: I like that I can enter a task anywhere in the system, follow a few basic rules and feel comfortable that it's properly captured.
-- Powerful: The query language gives me the ability to look at any view of my tasks, embeddable in any note.
-- Portable: It's all in markdown files that I own. Yes, there are Obsidian plug-ins that power some of the viewing of tasks. But in the end, the tasks, tags, and links are all plain text. If Obsidian and all the plugins disappeared tomorrow, I'd still have my data.
+- **Integrated**: The best part about this system for my use is that tasks live side-by-side with the information that they're related to. Other dedicated task managers are great at organizing complex lists of tasks but require management unto themselves, separate from the place where you take notes related to the actual work. This system allows both project note-taking, idea management, reminders, and tasks to be commingled.
+- **Flexible**: I like that I can enter a task anywhere in the system, follow a few basic rules and feel comfortable that it's properly captured. I can create a note anywhere, at any time, and throw some in-line tasks in it and they'll be in my m.
+- **Powerful**: The query language gives me the ability to look at any view of my tasks, embeddable in any note. For many task managers, this is a premium feature that you have to pay for.
+- **Portable**: It's all in markdown files that I own. Yes, there are Obsidian plug-ins that power some of the viewing of tasks. But in the end, the tasks, tags, and links are all plain text. If Obsidian and all the plugins disappeared tomorrow, I'd still have all of my tasks.
 
 ### Downsides of this system
 - It is technically possible for a task to get "lost". If I add a task without a #task tag or the wrong tags or without a date or in the wrong place, it could not show up where/when I need it to. This risk is mitigated by having a manual review process to go over my note edits for the day. Another mitigation technique is the "Orphan Notes" page in the root which queries for tasks that do not appear to be valid.
-- Mobile capture isn't super simple. One of the benefits of dedicated task managers is that they're optmized for quick task capture. There is a "Quick Add" plugin which works nicely on desktop, but I don't have a capture problem on desktop. For now, I capture ideas on mobile in another inbox and transfer to Obsidian during my daily review. I'm sacrificing this for the other benefits.
-- It's kinda brittle. You've gotta write and maintain queries. Things can break. It's not an "off the shelf" solution. It takes some patience.
-- My biggest gripe with using Obsidian this way is that templates are not "backwards compatible". By this I mean that if I update a query in a template, the notes that were generated from that template do not get that update. This isn't a huge problem for daily notes, but for Project Notes and Person notes, it's very annoying. There's no simple way for me to see how far a template has diverged from notes underneath it. The best way to solve is through search and replace or brute force editing sometimes.
+- Mobile capture isn't super simple. One of the benefits of dedicated task managers is that they're optimized for quick task capture with easy mobile apps/widgets. There is a "Quick Add" plugin which works nicely on desktop, but I don't have a capture problem on desktop. For now, I capture ideas on mobile in email and transfer to Obsidian during my daily review. I'm willing to live with this.
+- It's kinda brittle. You've gotta write and maintain queries. Things can break. It's not an "off the shelf" solution. It takes some patience. This is not for everyone, but I enjoy the maintenance.
+- Note templates are not "backwards compatible". By this I mean that if I update a query in a template, the notes that were generated from that template do not get that update. This isn't a huge problem for daily notes, but for Project Notes and Person notes, it's very annoying. There's no simple way for me to see how far a template has diverged from notes underneath it. The best way to solve is through complex search and replace or brute force editing sometimes.
 
 ## Core Setup
 So, how do I set all this up? It's a combination of plugins, a vault structure, and some templates. Once all that is in place, there's a workflow that runs the show.
 
 ### Plugins
-Besides the obvious installation of Obsdian, my system relies on the following plugins:
+Besides the obvious installation of Obsidian, my system relies on the following plugins:
 - [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks): Creates task creation and management tools.
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview): Creates a system for querying your Obsidian vault and displaying the results in notes.
 - [Archiver](https://github.com/ivan-lednev/obsidian-task-archiver): Enables easy archiving of completed tasks.
@@ -105,9 +105,9 @@ Templates are the heart of the system. They set up the Daily Note, Person Notes,
 #### The Daily Note Template
 Each day I generate a daily note. Here's a sample of a rendered daily note:
 
-{% image "./dailynote.png", "A screencapture of a sample daily note from the sample vault" %}
+{% image "./dailynote.png", "A screen capture of a sample daily note from the sample vault" %}
 
-It is based on my Daily Note template ([source](https://github.com/mmorowitz/sample-obsidian-tasks-vault/blob/main/Templates/Daily%20Note%20Template.md)) which has three important task queries: Tasks Planned Today, Today's Reminders, and Tasks Completed Today.
+This is generated from a sample Daily Note template ([source](https://github.com/mmorowitz/sample-obsidian-tasks-vault/blob/main/Templates/Daily%20Note%20Template.md)) which has three important task queries: Tasks Planned Today, Today's Reminders, and Tasks Completed Today.
 
 ##### Tasks Planned Today
 
@@ -122,7 +122,7 @@ group by priority
 ```
 {% endraw %}
 
-Group by priority is my personal preference basd on my workflow. You can group or sort however you like. Another personal preference is that I exclude items in my "Reminders" folder from this task list and I pull them into a separate query below with the inverse path statement.
+Group by priority is my personal workflow preference. You can group or sort however you like. Another personal preference is that I exclude items in my "Reminders" folder from this task list and I pull them into a separate query below with the inverse path statement.
 
 > **NOTE** This query relies a bit on using the [Global Task Filter](https://obsidian-tasks-group.github.io/obsidian-tasks/getting-started/global-filter/) feature of the Tasks plugin. Using this, I tag anything that is actually a task with a `#task` tag. The queries will ignore anything without that tag, enabling the creation of resusable checklists, such as my Daily Review or other shopping lists. If you don't use this, you have to put exclusion clauses in your queries by filename or by heading or some other method (this gets messy).
 
@@ -151,14 +151,14 @@ heading does not include Daily Review
 ```
 {% endraw %}
 
-This will show the completed task and what file it orginated in.
+This will show the completed task and what file it originated in.
 
 Besides those queries, the rest of the content on the page is essentially supporting links and content that I might find useful during the day such as a Daily Review checklist. This changes relatively frequently.
 
 #### The Person Template
 I keep a note associated with each person I interact with. This may sound a little creepy at first, but all it really does is house a query of tasks where I mention that person. This could be done with tags (e.g. `#person/JohnDoe`) but you still have to house that query somewhere so I still needed the note.
 
-Person notes are prefixed with a `@` to make it easy to filter when inserting a link.
+Person notes are prefixed with a `@` to make it easy to filter when inserting a link or opening the file from the Obsidian quick switcher.
 
 The Person note has two main uses:
 1. Houses the query that shows all tasks where this person is tagged. So, when I'm talking to them, I can pull up a list of everything I want to discuss, review, or delegate to them.
@@ -196,6 +196,6 @@ There are definitely efficiencies that can be found with more advance uses of pl
 - [Obsidian Tasks Plug-In](https://obsidian-tasks-group.github.io/obsidian-tasks/)
 
 ## Changelog
-2023.02.25: Formatting updates and some links added
+2023.02.25: Formatting updates, spelling fixes, and some links added
 
 2023.01.28: Initial Version
