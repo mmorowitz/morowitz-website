@@ -20,7 +20,7 @@ Index:
 ## Introduction
 I use Obsidian and a collection of plugins for a custom system that combines task management with daily journaling and free-form note-taking. My goal was a balance between simplicity, flexibility, and portability. While this does utilize Obsidian-specific plugins, it doesn't *rely* on them to keep the information. Everything is still plain text in markdown. Any plugin is essentially a shortcut/workflow enabler.
 
-> Note: This guide covers tempaltes and a workflow and assumes you know the basics of using Obsidian and plugins.
+> Note: This guide covers tempaltes and a workflow and assumes you know the basics of using Obsidian and plugins. I'm sure there are a thousand ways to improve this. If you have any questions, ideas, suggestions, or just want to say 'hi', I'm at hi at morowitz.com.
 
 My task management technique is loosely inspired by [David Allen's "Getting Things Done"](https://gettingthingsdone.com/), particularly with concepts like *Next Action*, *Wating For*, periodic reviews, reminders (ticklers), and contexts.
 
