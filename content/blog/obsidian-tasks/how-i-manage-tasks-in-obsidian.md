@@ -107,13 +107,14 @@ Each day I generate a daily note. Here's a sample of a rendered daily note:
 
 {% image "./dailynote.png", "A screencapture of a sample daily note from the sample vault" %}
 
-It is based on my Daily Note template ([source](https://github.com/mmorowitz/sample-obsidian-tasks-vault/blob/main/Templates/Daily%20Note%20Template.md)) which has three important task queries:
+It is based on my Daily Note template ([source](https://github.com/mmorowitz/sample-obsidian-tasks-vault/blob/main/Templates/Daily%20Note%20Template.md)) which has three important task queries: Tasks Planned Today, Today's Reminders, and Tasks Completed Today.
 
-1. **Tasks Planned Today**
+##### Tasks Planned Today
+
 This lists out any uncompleted tasks that have been either set to be DUE today (or earlier) or SCHEDULED today (or earlier). I do not personally use deadline, I simply review daily and schedule tasks.
 
-{% raw %}
-```
+ {% raw %}
+ ```
 (due before {{date:YYYY-MM-DD}}) OR (scheduled before {{date:YYYY-MM-DD}})
 not done
 path does not include Reminders
@@ -123,10 +124,10 @@ group by priority
 
 Group by priority is my personal preference basd on my workflow. You can group or sort however you like. Another personal preference is that I exclude items in my "Reminders" folder from this task list and I pull them into a separate query below with the inverse path statement.
 
-> NOTE: This query relies a bit on using the [Global Task Filter](https://obsidian-tasks-group.github.io/obsidian-tasks/getting-started/global-filter/) feature of the Tasks plugin. Using this, I tag anything that is actually a task with a `#task` tag. The queries will ignore anything without that tag, enabling the creation of resusable checklists, such as my Daily Review or other shopping lists. If you don't use this, you have to put exclusion clauses in your queries by filename or by heading or some other method (this gets messy).
+> **NOTE** This query relies a bit on using the [Global Task Filter](https://obsidian-tasks-group.github.io/obsidian-tasks/getting-started/global-filter/) feature of the Tasks plugin. Using this, I tag anything that is actually a task with a `#task` tag. The queries will ignore anything without that tag, enabling the creation of resusable checklists, such as my Daily Review or other shopping lists. If you don't use this, you have to put exclusion clauses in your queries by filename or by heading or some other method (this gets messy).
 
 
-2. **Today's Reminders**
+##### Today's Reminders
 Same query as above, inverting the statement about the "Reminders" path. A personal preference to pull these separately.
 
 {% raw %}
@@ -137,7 +138,7 @@ path includes Reminders
 ```
 {% endraw %}
 
-3. **Tasks Completed Today**
+##### Tasks Completed Today
 For my Daily Review, this provides everything completed on that day.
 
 {% raw %}
@@ -189,7 +190,12 @@ Project notes have the following uses:
 There are definitely efficiencies that can be found with more advance uses of plugins, Templater, and other tips and tricks. The possibilities are pretty vast. If you have some suggestions, ideas, questions, or just want to say 'hi' or thanks, you can reach me at hello at morowitz.com.
 
 ## References (and other reading)
-- [Sample Obsidian Vault](https://github.com/mmorowitz/sample-obsidian-tasks-vault)
+- [My sample Obsidian vault](https://github.com/mmorowitz/sample-obsidian-tasks-vault)
+- [David Allen's "Getting Things Done"](https://gettingthingsdone.com/)
+- [Tiago Forte's PARA Method](https://fortelabs.com/blog/para/)
+- [Obsidian Tasks Plug-In](https://obsidian-tasks-group.github.io/obsidian-tasks/)
 
 ## Changelog
-2023.01.28- Initial Version
+2023.02.25: Formatting updates and some links added
+
+2023.01.28: Initial Version

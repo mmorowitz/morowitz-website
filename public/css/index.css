@@ -17,6 +17,9 @@
 	--text-color-link-active: #5f2b48;
 	--text-color-link-visited: #17050F;
 
+	/* code color */
+	--text-color-code: #33FF00;
+
 	--syntax-tab-size: 2;
 }
 
@@ -53,7 +56,7 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 40em;
+	max-width: 60em;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -76,6 +79,7 @@ p {
 
 li {
 	line-height: 1.5;
+	margin: 8px 0;
 }
 
 a[href] {
@@ -117,11 +121,13 @@ table {
 table td,
 table th {
 	padding-right: 1em;
+	border: 1px solid;
 }
 
 pre,
 code {
 	font-family: var(--font-family-monospace);
+	color: var(--text-color-code);
 }
 pre:not([class*="language-"]) {
 	margin: .5em 0;
